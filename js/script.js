@@ -1,11 +1,15 @@
-let movieCount = prompt("How many films do you watch?", "0"); 
+let moviesCount     = prompt("How many films do you watch?", "0"),
+    moviesWatched   = prompt("One of the last movies you wathced?", ""),
+    movieRate       = prompt("How did you rate it?", "");
 
 let personalMovieDB = {
-    count  : movieCount,
+    count  : moviesCount,
     movies : {},
     actors : {},
     genres : [],
     privat : false
 };
 
-alert(personalMovieDB['count']);
+personalMovieDB.movies[moviesWatched] = movieRate;
+
+console.log(personalMovieDB);
